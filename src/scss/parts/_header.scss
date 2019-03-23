@@ -1,0 +1,293 @@
+// header
+
+.header {
+    padding-bottom: 60px;
+    position: relative;
+
+    @include mq(tablet, max) {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        background-image: url('../../img/header-bcgr-tablet.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    &::before{
+        content: '';
+        width: 2px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20.4%;
+        background-color: #efefef;
+
+        @include mq(tablet, max) {
+            display: none;
+        }
+    }
+    &__container {
+        padding: 85px 65px 60px 115px;
+        background-image: url('../img/header_background.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include mq(tablet, max) {
+            margin: 0;
+            padding-right: 35px;
+            background-image: none;
+
+            @include mq(phone, max) {
+                padding: 35px;
+            }
+        }
+       
+        &::before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 34.1%;
+            background-color: #efefef;
+
+            @include mq(tablet, max) {
+                display: none;
+            }
+        }
+        
+    }
+
+    &__col-first {
+        @include mq(tablet, max) {
+            position: absolute;
+            top: 254px;
+            left: 80px;
+        }
+
+        @include mq(phone, max) {
+            top: 200px;
+            left: 10px;
+        }
+        
+    }
+
+    &__title {
+        margin-bottom: 110px;
+        max-width: 210px;
+        font-size: 44px;
+        line-height: 0.75;
+        text-transform: uppercase;
+        color: #989898;
+
+        @include mq(tablet, max) {
+            font-size: 46px;
+            line-height: 1;
+        }
+
+        @include mq(phone, max) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__rectangle {
+        margin-bottom: 150px;
+        margin-left: -18px;
+        width: 50px;
+        height: 7px;
+        display: block;
+        align-self: center;
+        transform: rotate(90deg);
+        background-color: #1d1d1d;
+
+        @include mq(tablet, max) {
+            display: none;
+        }
+    }
+
+    &__description {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.15;
+        color: #3a3a3a;
+
+        span {
+            display: block;
+
+            @include mq(tablet, max) {
+                display: inline;
+            }
+        }
+
+        &::after{
+            content: '';
+            width: 11px;
+            height: 3px;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            background-color: #ef4444;
+
+            @include mq(tablet, max) {
+                width: 50px;
+                height: 10px;
+                bottom: -70px;
+            }
+        }
+
+        @include mq(tablet, max) {
+            font-size: 30px;
+        }
+
+        @include mq(phone, max) {
+            font-size: 25px;
+        }
+    }
+
+    &__col-second {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__logo {
+        margin-bottom: 80px;
+        position: relative;
+        font-size: 44px;
+        text-transform: uppercase;
+        color: #1d1d1d;
+
+        &::before {
+            content: '';
+            width: 13px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            top: -30px;
+            left: 1%;
+            background-color: #ef4444;
+
+            @include mq(tablet, max) {
+               width: 18px;
+               height: 18px;
+               top: -25px;
+            }
+
+            @include mq(phone, max) {
+                width: 13px;
+                height: 13px;
+                top: -15px;
+            }
+        }
+
+        @include mq(tablet, max) {
+            margin-right: 250px;
+            margin-bottom: 600px;
+            font-size: 72px;
+            color: #000;
+        }
+
+        @include mq(phone, max) {
+            margin-right: 200px;
+            margin-bottom: 450px;
+            font-size: 44px;
+        }
+    }
+
+    &__form {
+        margin-bottom: 75px;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__field {
+        margin-bottom: 15px;
+        padding: 5px 0;
+        max-width: 240px;
+        border: 2px solid #e5e5e5;
+
+        @include mq(tablet, max) {
+            min-width: 430px;
+            padding: 30px 0;
+        }
+
+        @include mq(phone, max) {
+            min-width: 120%;
+            padding: 20px 0;
+        }
+
+        &::placeholder{
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            color: #646464;
+
+            @include mq(tablet, max) {
+                max-width: 430px;
+                font-size: 24px;
+                text-transform: lowercase;
+            }
+            @include mq(phone, max) {
+                min-width: 100%;
+                padding: 20px 0;
+            }
+        }
+
+        
+    }
+
+    &__btn {
+        margin-top: 15px;
+        margin-right: 25px;
+        padding: 10px 0;
+        width: 180px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        color: rgba($color: #646464, $alpha: 0.5);
+        background-color: #fff;
+        box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.26); 
+
+        @include mq(tablet, max) {
+            margin-right: 70px;
+            padding: 25px 0;
+            width: 280px;
+            font-size: 22px;
+        }
+
+        @include mq(phone, max) {
+            margin-right: 0;
+            padding: 15px 0;
+            min-width: 120%;
+        }
+    }
+
+
+
+
+    &__subtitle {
+        padding-top: 20px;
+        padding-left: 28px;
+        max-width: 210px;
+        font-size: 44px;
+        line-height: 0.75;
+        text-transform: uppercase;
+        color: #989898;
+
+        @include mq(tablet, max) {
+            display: none;
+        }
+    }
+
+
+}
+
+

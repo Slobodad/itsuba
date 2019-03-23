@@ -1,0 +1,116 @@
+// Instruction
+.instruction {
+    padding-bottom: 60px;
+
+    @include mq(tablet, max) {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        background-color: #fff;
+    }
+
+    &__container {
+        padding: 65px 115px 85px;
+        background-color: #fff;
+        background-size: cover;
+
+        @include mq(tablet, max) {
+            margin: 0;
+            padding: 65px 65px 45px 85px;
+        }
+
+        @include mq(phone, max) {
+            padding: 55px 45px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        line-height: 0.25;
+        text-transform: uppercase;
+        color: #bfbdbd;
+
+        @include mq(phone, max) {
+            text-align: center;
+            line-height: 1;
+        }
+    }
+
+    &__title {
+        margin-bottom: 100px;
+        font-size: 32px;
+        line-height: 0.75;
+        text-transform: uppercase;
+        color: #636363;
+
+        @include mq(tablet, max) {
+            margin-bottom: 50px;
+        }
+
+        @include mq(phone, max) {
+            font-size: 24px;
+            text-align: center;
+            line-height: 1;
+        }
+    }
+
+    &__element {
+        display: flex;
+        margin-bottom: 20px;
+
+        @include mq(tablet, max) {
+            margin-bottom: 10px;
+        }
+
+        &:last-child {
+            min-width: 490px;
+
+            @include mq(tablet, max) {
+                min-width: 100%;
+            }
+        }
+        
+        span {
+            margin-right: 35px;
+            padding-left: 5px;
+            max-width: 31px;
+            max-height: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            transform: rotate(-90deg);
+            color: rgba($color: #636363, $alpha: 0.2)
+        }
+
+        p {
+            position: relative;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1;
+            text-align: left;
+            text-transform: uppercase;
+            color: #646464;
+
+            &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: -10px;
+                background-color: #ef4444;
+            }
+        }
+    }
+
+    &__slider {
+        padding-top: 55px;
+
+        @include mq(tablet, max) {
+            padding-top: 0;
+        }
+
+        @include mq(phone, max) {
+            padding-left: 80px;
+        }
+    }
+}

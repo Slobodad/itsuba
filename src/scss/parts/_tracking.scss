@@ -1,0 +1,167 @@
+// Tracking
+
+.tracking {
+    padding-bottom: 60px;
+
+    @include mq(tablet, max) {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        background-color: #fff;
+    }
+
+    &__container {
+        padding: 45px 115px 40px;
+        background-color: #fff;
+        background-size: cover;
+
+        @include mq(tablet, max) {
+            margin: 0;
+            padding: 65px 85px 40px;
+        }
+
+        @include mq(phone, max) {
+            padding: 55px 45px;
+        }
+    }
+
+    &__box {
+        padding-top: 50px;
+
+        @include mq(tablet, max) {
+            padding-top: 0;
+        }
+    }
+
+    &__img {
+        @include mq(tablet, max) {
+            padding-top: 80px;
+            align-self: center;
+            order: 1;
+        }
+
+        @include mq(phone, max) {
+            padding-top: 0;
+        }
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        line-height: 0.25;
+        text-transform: uppercase;
+        color: #bfbdbd;
+
+        @include mq(tablet, max) {
+            line-height: 1;
+        }
+
+        @include mq(phone, max) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 75px;
+        max-width: 165px;;
+        font-size: 32px;
+        line-height: 0.75;
+        text-transform: uppercase;
+        color: #636363;
+
+        @include mq(tablet, max) {
+            margin-right: 25px;
+            margin-bottom: 30px;
+            max-width: 100%;
+            text-align: right;
+            line-height: 1;
+        }  
+    }
+
+    &__list-first {
+        padding-right: 50px;
+
+        @include mq(phone, max) {
+            padding-right: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__list-second {
+        padding-top: 220px;
+
+        div {
+            padding-bottom: 20px;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    &__element {
+        margin-bottom: 60px;
+        font-size: 26px;
+        text-align: right;
+        text-transform: uppercase;
+        line-height: 0.9;
+        color: #636363;
+
+        @include mq(tablet, max) {
+            margin-bottom: 40px;
+        }
+
+        @include mq(phone, max) {
+           line-height: 1.3;
+        }
+
+        span:last-child {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #dc8d8d;
+        }
+    }
+
+    &__element-tabletOn {
+        display: none;
+
+        @include mq(tablet, max) {
+            display: block;
+        }
+    }
+
+}
+
+.tabletOff {
+    @include mq(tablet, max) {
+        display: none;
+    }   
+}
+
+.small {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #bfbdbd;
+}
+
+.average {
+    font-size: 18px;
+
+    span:first-child {
+        color: #bfbdbd;
+    }
+
+    span:nth-child(2) {
+        color: #bfbdbd;
+    }
+}
+
+.large {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #bfbdbd;
+}

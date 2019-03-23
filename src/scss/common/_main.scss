@@ -1,0 +1,28 @@
+// main
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    background-color: #efefef;
+}
+
+img {
+    max-width: 100%;
+}
+
+:hover {
+    transition: .1s ease-in;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
